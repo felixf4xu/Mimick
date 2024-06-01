@@ -187,7 +187,7 @@ void mmk_init_vital_functions(plt_ctx ctx)
         mmk___stdio_common_vfprintf_ = (void *)
                 plt_get_real_fn(ctx, "__stdio_common_vfprintf");
         if (mmk___stdio_common_vfprintf_)
-            mmk_vfprintf_ = win32_vfprintf_fallback;
+            mmk_vfprintf_ = (void *)win32_vfprintf_fallback;
     }
 #endif
 
